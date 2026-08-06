@@ -1,4 +1,6 @@
 package com.base;
+import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 /**
  * Hello world!
@@ -66,8 +68,118 @@ public class App {
                     }
 
                 else if(eleccionusuario ==4){
-                    
+                System.out.println("Mostraremos los datos de libros por metodos");
+                MaterialLibro libro1 = new MaterialLibro();
+                MaterialRevistas revista1 = new MaterialRevistas();
+                libro1.mostrarDatos("Don Quijote", 1543);
+                revista1.mostrarDatos("Revista de modas ", 12);   
+                System.out.println("ingrese 100 para salir");
+                eleccionusuario = sc.nextInt();                       
                 }
+                else if(eleccionusuario == 5){
+                    try{
+                    System.out.println("Ingrese edad");
+                    int edad = sc.nextInt();
+                    if (edad<0){
+                        throw new IllegalStateException("Edad no válida");
+                    }
+                    } 
+                    catch(Exception e){
+                        System.out.println(e.getLocalizedMessage());
+                    }
+                    finally 
+                    {
+                        System.out.println("Bloque finally ejecutado");
+                        eleccionusuario = 100;
+                    }
+
+                }
+                else if(eleccionusuario == 6){
+                    try{
+                        System.out.println("Ingrese número 1");
+                        int num1 = sc.nextInt();
+                        System.out.println("Ingrese número 2");
+                        sc.nextLine();
+                        int num2 = sc.nextInt();
+                        int resultado = num1 / num2;
+                        System.out.println(resultado);
+                    }
+                    catch(ArithmeticException e){
+                        System.out.println(e.getLocalizedMessage());
+                    }
+                    finally{
+                        System.out.println("Bloque finally");
+                        eleccionusuario =100;
+                    }
+                }
+                else if(eleccionusuario ==7){
+                    try{
+                    System.out.println("Ingrese un número");
+                    int eleccionNumero = sc.nextInt();
+                    System.out.println(eleccionNumero);
+                    }
+                    catch(InputMismatchException e){
+                        System.out.println("Error al ingresar los datos " + e.getLocalizedMessage());
+                    }
+                    finally{
+                        System.out.println("Bloque finally");
+                        eleccionusuario =100;                        
+                    }
+                }
+
+                else if (eleccionusuario == 8){
+                    System.out.println("Arreglos");
+                    double[] notas = new double[5];
+                    for(int i = 0; i<notas.length; i++){
+                        System.out.println("ingrese la nota de " + (i+1));
+                        notas[i] = sc.nextDouble();
+                    }
+                    for(int i = 0; i<notas.length; i++){
+                        System.out.println("Nota " + notas[(i+1)] + " " + notas[i]);
+                    }
+                    eleccionusuario =100;
+                    double promediosuma = 0;
+                    for ( int i = 0; i<notas.length; i++){
+                        promediosuma +=notas[i];
+                        
+                    }
+                    System.out.println("El promedio es " + promediosuma/notas.length);
+                }
+                else if(eleccionusuario ==9){
+                    System.out.println("Ingrese 3 números consecutivamente");
+                    double numero1= sc.nextInt();
+                    double numero2 = sc.nextInt();
+                    double numero3 = sc.nextInt();
+                    ArrayList<Double> arreglo1 = new ArrayList<>();
+                    arreglo1.add(numero1);
+                    arreglo1.add(numero2);
+                    arreglo1.add(numero3);
+                    double mayor = arreglo1.get(0);
+                    double menor = arreglo1.get(0);
+                    for(int i = 1; i<arreglo1.size(); i++)
+                        {
+                        if (arreglo1.get(i)>mayor){
+                            mayor = arreglo1.get(i);
+                        }
+                    }
+                    for(int i = 1; i<arreglo1.size(); i++)
+                        {
+                        if (arreglo1.get(i)<menor){
+                            menor = arreglo1.get(i);
+                        }
+                    }            
+                    System.out.println("El mayor es " + mayor);
+                    System.out.println("El menor es " + menor);
+                    eleccionusuario = 100;        
+                }
+
+
+
+
+
+
+
+
 
 
 
