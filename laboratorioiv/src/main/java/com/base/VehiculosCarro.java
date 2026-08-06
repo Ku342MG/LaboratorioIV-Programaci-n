@@ -1,5 +1,5 @@
 package com.base;
 
-public class VehiculosCarro {
-
+public class VehiculosCarro extends Vehiculo {
+            
 }

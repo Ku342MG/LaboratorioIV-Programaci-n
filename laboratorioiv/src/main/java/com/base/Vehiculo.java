@@ -11,11 +11,17 @@ public class Vehiculo {
     public String getMarca(){
         return this.marca;
     }
+    public void setMarca(String marca){
+        this.marca = marca;
+    }
+    public void setKilometros(double kilometros){
+        this.kilometros = kilometros;
+    }
     public double getKilometros(){
         return this.kilometros;
     }
 
     public void mostrarDatos(){
-        System.out.println( "La marca es " + this.marca + "Los kilometros son " + this.kilometros);
+        System.out.println( "La marca es: " + this.marca + " y Los kilometros son " + this.kilometros);
     }
 }
