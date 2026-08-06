@@ -210,7 +210,7 @@ public class App {
                     System.out.println("El promedio es " + (suma/arreglo1.size()));
                     eleccionusuario = 100;                            
                 }
-                else if(eleccionusuario ==1){
+                else if(eleccionusuario ==11){
                     System.out.println("Mostrar edad");
                     int edad = sc.nextInt();
                     if (edad<12){
@@ -227,6 +227,30 @@ public class App {
                         System.out.println("Edad no posible");
                     }
                     eleccionusuario = 100;
+                }
+                else if (eleccionusuario == 12){
+                    int menueleccion;
+                    do{
+                    System.out.println("Que desea hacer");
+                    System.out.println("1. Sumar");
+                    System.out.println("2.Restar");
+                    menueleccion = sc.nextInt();
+                    if(menueleccion ==1){
+                        System.out.println("se hara una suma de 20 +20");
+                        System.out.println(20+20);
+                        menueleccion = 3;
+                        }
+                    else if(menueleccion ==2){
+                        System.out.println("se hara una suma de 20 -20");
+                        System.out.println(20-20);
+                        menueleccion = 3;                        
+                    }
+                    else if(menueleccion <1 && menueleccion>3){
+                        System.out.println("Opcion no valida");
+                        menueleccion =3;
+                    }
+                    }
+                    while (menueleccion == 3);
                 }
 
 
