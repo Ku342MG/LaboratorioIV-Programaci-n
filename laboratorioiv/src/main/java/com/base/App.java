@@ -172,6 +172,62 @@ public class App {
                     System.out.println("El menor es " + menor);
                     eleccionusuario = 100;        
                 }
+                else if(eleccionusuario ==10){
+                    System.out.println("Estadistica");
+                    System.out.println("Ingrese 5 números consecutivamente");
+                    double numero1= sc.nextInt();
+                    double numero2 = sc.nextInt();
+                    double numero3 = sc.nextInt();
+                    double numero4 = sc.nextDouble();
+                    double numero5 = sc.nextDouble();
+                    ArrayList<Double> arreglo1 = new ArrayList<>();
+                    arreglo1.add(numero1);
+                    arreglo1.add(numero2);
+                    arreglo1.add(numero3);
+                    arreglo1.add(numero4);
+                    arreglo1.add(numero5);
+                    double mayor = arreglo1.get(0);
+                    double menor = arreglo1.get(0);
+                    double suma = 0;
+                    for(int i = 1; i<arreglo1.size(); i++)
+                        {
+                        if (arreglo1.get(i)>mayor){
+                            mayor = arreglo1.get(i);
+                        }
+                    }
+                    for(int i = 1; i<arreglo1.size(); i++)
+                        {
+                        if (arreglo1.get(i)<menor){
+                            menor = arreglo1.get(i);
+                        }
+                    }            
+                    for (int i= 0; i<arreglo1.size(); i++){
+                        suma += arreglo1.get(i);
+                    }
+                    System.out.println("El mayor es " + mayor);
+                    System.out.println("El menor es " + menor);
+                    System.out.println("La suma es " + suma);
+                    System.out.println("El promedio es " + (suma/arreglo1.size()));
+                    eleccionusuario = 100;                            
+                }
+                else if(eleccionusuario ==1){
+                    System.out.println("Mostrar edad");
+                    int edad = sc.nextInt();
+                    if (edad<12){
+                        System.out.println("Usted es niño");
+                    }
+                    else if(edad>12 || edad <18 ){
+                        System.out.println("Usted es adolescente");
+                    }
+                    else if(edad>18){
+                        System.out.println("Usted es adulto");
+
+                    }
+                    else if ( edad<0 && edad > 100){
+                        System.out.println("Edad no posible");
+                    }
+                    eleccionusuario = 100;
+                }
 
 
 
