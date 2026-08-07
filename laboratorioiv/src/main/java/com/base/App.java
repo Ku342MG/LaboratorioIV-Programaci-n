@@ -39,7 +39,7 @@ public class App {
                     }
                 else if (eleccionusuario == 3)
                     {
-                        System.out.println("Ejercicio 4");
+                        System.out.println("Ejercicio 3");
                         sc.nextLine();
                         System.out.println("Su pago será en tarjeta o efectivo?");
                         String textoejercicio = sc.nextLine();
@@ -135,7 +135,7 @@ public class App {
                         notas[i] = sc.nextDouble();
                     }
                     for(int i = 0; i<notas.length; i++){
-                        System.out.println("Nota " + notas[(i+1)] + " " + notas[i]);
+                        System.out.println("Nota "  + notas[i]);
                     }
                     eleccionusuario =100;
                     double promediosuma = 0;
@@ -211,12 +211,12 @@ public class App {
                     eleccionusuario = 100;                            
                 }
                 else if(eleccionusuario ==11){
-                    System.out.println("Mostrar edad");
+                    System.out.println("Ingrese su Edad");
                     int edad = sc.nextInt();
                     if (edad<12){
                         System.out.println("Usted es niño");
                     }
-                    else if(edad>12 || edad <18 ){
+                    else if(edad>12 && edad <18 ){
                         System.out.println("Usted es adolescente");
                     }
                     else if(edad>18){
@@ -252,6 +252,33 @@ public class App {
                     }
                     while (menueleccion == 3);
                 }
+
+                else if(eleccionusuario ==15){
+                    System.out.println("Ejercicio 15");
+                    EmpleadoTiempoCompleto empleado1 = new EmpleadoTiempoCompleto();
+                    EmpleadoPorHoras empleado2 = new EmpleadoPorHoras();
+                    empleado1.mostrarSalario(54362);
+                    empleado2.mostrarSalario(45);
+                    eleccionusuario = 100;
+                }
+                else if(eleccionusuario == 16){
+                    System.out.println("Ingrese el nombre y tipo de producto");
+                    String nombre = sc.nextLine();
+                    sc.nextLine();
+                    int tipo = sc.nextInt();
+                    ProductoDigital producto1 = new ProductoDigital();
+                    producto1.mostrarNombre(tipo, nombre);
+                    System.out.println("Ingrese el nombre y tipo de producto");
+                    sc.nextLine();
+                    String nombre1 = sc.nextLine();
+                    sc.nextLine();
+                    int tipo1 = sc.nextInt();
+                    ProductoDigital producto2 = new ProductoDigital();
+                    producto2.mostrarNombre(tipo1, nombre1);
+                                        
+                }
+
+                
 
 
 
