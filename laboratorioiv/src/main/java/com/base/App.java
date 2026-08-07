@@ -211,7 +211,7 @@ public class App {
                     eleccionusuario = 100;                            
                 }
                 else if(eleccionusuario ==11){
-                    System.out.println("Ingrese su Edad");
+                    System.out.println("Ingrese su Edadddddddd");
                     int edad = sc.nextInt();
                     if (edad<12){
                         System.out.println("Usted es niño");
