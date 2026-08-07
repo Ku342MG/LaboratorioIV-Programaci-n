@@ -277,21 +277,6 @@ public class App {
                     producto2.mostrarNombre(tipo1, nombre1);
                                         
                 }
-
-                
-
-
-
-
-
-
-
-
-
-
-
-
-
                 else
                 {
                     if(eleccionusuario<0 || eleccionusuario >100)

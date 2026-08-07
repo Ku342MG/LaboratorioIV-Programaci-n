@@ -1,0 +1,12 @@
+@startuml
+
+actor Usuario
+participant Sistema
+
+database "Base de Datos " as DB
+
+Usuario -> Sistema : consultarEstudiante(carnet)
+Sistema -> DB : buscarEstudiante(carnet)
+DB --> Sistema : datos del estudiante 
+Sistema --> Usuario : mostrarInformacion(estudiante)
+@enduml
